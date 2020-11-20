@@ -121,11 +121,13 @@
             <h2 class="title">Projects</h2>
             <h5 class="description">
               Learning goes hand-in-hand with building new and cool stuff.
-              If you have worked on something really cool and want your Project to be featured here, click
+              <p>&nbsp;</p>
+              If you have an innovative idea and want to work with us to make your idea into reality than submit the form
+              or you have worked on something really cool and want your Project to be featured on our platfrom, click
               on the Button below.
             </h5>
             <p>&nbsp;</p>
-            <a href="https://forms.gle/kGa44uYi1HXPVLr48" class="btn btn-primary" id="buttons" target="blank">
+            <a href="" class="btn btn-primary" id="buttons" target="blank">
               <b>Submit a Project</b>
             </a>
             <a href="./name_generator.html" class="btn btn-primary" id="buttons"><b>Generate Name</b></a>
@@ -134,7 +136,7 @@
 
           <!-- Second Column -->
           <div class="col-lg-6" style="text-align:center;">
-            <img class="img-fluid" src="assets/img/kit/collage.png" />
+            <img class="img-fluid" src="assets/img/kit/projects.png" />
           </div>
         </div>
         <!-- ============================================ /.**** Banner **** ============================================ -->
@@ -151,14 +153,7 @@
           </div>
 
           <!-- ============================================ Loading Animation ============================================ -->
-          <div id="loading-animation">
-            <div class="google-loader">
-              <div class="dot blue"></div>
-              <div class="dot red"></div>
-              <div class="dot yellow"></div>
-              <div class="dot green"></div>
-            </div>
-          </div>
+         
 
           <div id="container-projects" class="row">
             <!-- ===== Here the Projects will Appear ===== -->
@@ -209,115 +204,7 @@
     })
 
 
-    $('document').ready(function () {
-
-      function getLinks(links) {
-
-        var result = '';
-
-        /* ============================================ Getting Link Type ============================================ */
-        links.forEach(function (link) {
-
-          if (link.linkType === 'Twitter') {
-            result += `<li style="color:rgb(0,101,202);">
-                          <a id="social_link1" href="${link.ur}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                       </li>`;
-          }
-
-          if (link.linkType == 'Github') {
-            result += `<li style="color:rgb(0,101,202);">
-                          <a id="social_link1" href="${link.url}" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-                       </li>`;
-          }
-
-          if (link.linkType == 'Blog') {
-            result += `<li style="color:rgb(0,101,202);">
-                          <a id="social_link1" href="${link.url}" target="_blank"><i class="fa fa-link" aria-hidden="true"></i></a>
-                       </li>`;
-          }
-
-        });
-
-        return result;
-      }
-
-      /* ============================================ Getting the Right Colour ============================================ */
-      function getColour(project) {
-        var colour = "";
-
-        switch (project.category) {
-          case "Android": colour = "rgb(13, 243, 90)";
-            break;
-
-          case "Cloud": colour = "rgb(250, 67, 5)";
-            break;
-
-          case "AR": colour = "rgb(133, 7, 235)";
-            break;
-
-          case "Web": colour = "rgb(0,101,202)";
-            break;
-
-          case "Firebase": colour = "rgb(255, 201,14)";
-            break;
-
-          case "Flutter": colour = "rgb(2,134,204)";
-            break;
-
-          default: colour = "rgb(255, 201,14)";
-            break;
-        }
-
-        return colour;
-      }
-
-      /* ============================================ Getting Template ============================================ */
-      function getTemplate(project) {
-        var template =
-          `<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 parent-card">                                        
-              <div class="card" data-id="${project.id}">                                                               
-                <div class="box"> 
-                
-                  <div class="img">
-                    <img src="${project.profilePicture}" alt="" />
-                  </div>   
-                  
-                  <h2 style="font-weight:400;" class="blue_text">${project.fullName}</h2>                          
-                  <p class="description">
-                    <b>${project.category.split('.')[0]}</b>
-                    <span class="peoject-dot" style="background :${getColour(project)}";></span>
-                  </p>            
-                  <p class="about">${((project.bio).substring(0, 84)).concat("...")}</p>                     
-                  <span class="project-social">                                                   
-                    <ul>${getLinks(project.links)}</ul>                                                          
-                  </span>                                                    
-                </div>                                                         
-              </div>                                                       
-           </div>`
-
-        return template;
-      }
-
-      var html = '';
-
-      /* ============================================ fetching Data by API ============================================ */
-      var settings = {
-        "url": "https://dschit.herokuapp.com/projects",
-        "method": "GET",
-        "timeout": 0,
-      };
-      $.ajax(settings).done(function (projects) {
-
-        projects.forEach(function (project) {
-          html += getTemplate(project);
-        });
-
-        /* ============================================ Stopping Animation and Placing Data ============================================ */
-        document.getElementById('loading-animation').style.display = "none";
-        $('#container-projects').append(html);
-        
-      });
-    });
+  
   </script>
 </body>
 
