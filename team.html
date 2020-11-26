@@ -1,196 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-      name="viewport"
-    />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="theme-color" content="#ffffff" />
 
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" href="favicon.png" />
-    <link rel="icon" href="favicon.png" />
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="theme-color" content="#ffffff" />
 
-    <!--     Fonts and icons     -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
-    />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="assets/css/material-kit.css?v=2.0.2" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" href="favicon.png" />
+  <link rel="icon" href="favicon.png" />
 
-    <!-- Documentation extras -->
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <link rel="stylesheet" href="assets/css/team.css" />
-    <link rel="stylesheet" href="assets/css/navbar.css" />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="assets/css/material-kit.css?v=2.0.2" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
-    <link
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      rel="stylesheet"
-      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/flickity@2.0/dist/flickity.min.css"
-    />
-    <script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+  <!-- Documentation extras -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/team.css" />
+  <link rel="stylesheet" href="assets/css/navbar.css" />
 
-    <title>Team | DSC PGDAV</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.min.css" />
+  <script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
-    <style>
-      body {
-        overflow-x: hidden;
-      }
+  <!-- link for new team card style -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
 
-      #top-button {
-        font-size: 20px;
-        transition: 0.3s ease;
-      }
+  <title>Team | DSC PGDAV</title>
 
-      .grid-item {
-        width: 25%;
-      }
+  <style>
+    body {
+      overflow-x: hidden;
+    }
 
-      .grid-item--width2 {
-        width: 50%;
-      }
+    #top-button {
+      font-size: 20px;
+      transition: 0.3s ease;
+    }
 
-      .img-fluid {
-        border-radius: 5px 5px;
-      }
+    .grid-item {
+      width: 25%;
+    }
 
-      .team-member-details {
-        cursor: pointer;
-      }
+    .grid-item--width2 {
+      width: 50%;
+    }
 
-      /* Preloader */
+    .img-fluid {
+      border-radius: 5px 5px;
+    }
 
-      #preloader {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: #fff;
-        z-index: 99;
-      }
+    .team-member-details {
+      cursor: pointer;
+    }
 
-      #status {
-        width: 200px;
-        height: 200px;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        background: #fff;
-        background-repeat: no-repeat;
-        background-position: center;
-        margin: -100px 0 0 -100px;
-      }
-    </style>
-    <!-- iframe removal -->
-  </head>
+    /* Preloader */
 
-  <body class="landing-page" name="top" id="top">
-    <div id="preloader">
-      <lottie-player
-        id="status"
-        src="https://assets6.lottiefiles.com/private_files/lf30_8a9atN.json"
-        mode="bounce"
-        background="#FFFFFF"
-        speed="1"
-        loop
-        autoplay
-      ></lottie-player>
-    </div>
-    <!-- ============================================ Navbar ============================================ -->
-    <nav
-      class="navbar navbar-color-on-scroll navbar-transparent fixed-top navbar-expand-lg"
-      color-on-scroll="100"
-      id="sectionsNav"
-    >
-      <!-- ===== Navbar through JS ===== -->
-    </nav>
-    <!-- ============================================ /.Navbar ============================================ -->
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #fff;
+      z-index: 99;
+    }
 
-    <div class="main main-raised margin-t-0">
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
+    #status {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      background: #fff;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin: -100px 0 0 -100px;
+    }
 
-      <div class="container">
-        <div class="container-page">
-          <!-- ============================================ **** Banner **** ============================================ -->
-          <div class="row mt-5">
-            <!-- First Column -->
-            <div class="col-lg-6">
-              <p>&nbsp;</p>
-              <h2 class="title">Team</h2>
-              <h5 class="description">
-                One log creates a small fire, adequate to warm you up, add just
-                a few more pieces to blast an immense bonfire, large enough to
-                warm up your entire circle; needless to say that individuality
-                counts but teamwork dynamites. At
-                <b class="blue_text">DSC PGDAV</b>
-                celebrate teamwork and attribute the success of DSC to the
-                wonderful individuals who put untiring efforts for it.
-              </h5>
-              <p>&nbsp;</p>
-            </div>
+    /* new styles for new representation */
+    .container_new {
+      position: relative;
+      width: 300px;
+      height: 300px;
+    }
 
-            <!-- Second Column -->
-            <div class="col-lg-6">
-              <img class="img-fluid" src="assets/img/kit/team.png" />
-            </div>
+    .image_new {
+      opacity: 1;
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: .5s ease;
+      backface-visibility: hidden;
+      filter: grayscale(100%);
+    }
+
+    .overlay_new {
+      transition: .5s ease;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      text-align: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    .container_new:hover .image_new {
+      filter: grayscale(0%);
+      opacity: 0.89;
+    }
+
+    .container_new:hover .overlay_new {
+      background-color: rgba(42, 43, 48, 0.31);
+      opacity: 1;
+    }
+
+    .text_new {
+      /* background-color: #4CAF50; */
+      color: rgb(232 232 232);
+      /* font-size: 16px; */
+      /* padding: 27px 32px; */
+      font-size: 30px;
+      font-family: 'Montserrat', sans-serif;
+      line-height: 30px;
+      font-weight: 700;
+      word-break: break-word;
+      margin: 138px 131px 0px 31px;
+    }
+
+    .div_p_new {
+      color: rgb(232 232 232);
+      font-size: 16px;
+      font-family: 'Montserrat', sans-serif;
+    }
+  </style>
+  <!-- iframe removal -->
+</head>
+
+<body class="landing-page" name="top" id="top">
+  <div id="preloader">
+    <lottie-player id="status" src="https://assets6.lottiefiles.com/private_files/lf30_8a9atN.json" mode="bounce"
+      background="#FFFFFF" speed="1" loop autoplay></lottie-player>
+  </div>
+  <!-- ============================================ Navbar ============================================ -->
+  <nav class="navbar navbar-color-on-scroll navbar-transparent fixed-top navbar-expand-lg" color-on-scroll="100"
+    id="sectionsNav">
+    <!-- ===== Navbar through JS ===== -->
+  </nav>
+  <!-- ============================================ /.Navbar ============================================ -->
+
+  <div class="main main-raised margin-t-0">
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+    <div class="container">
+      <div class="container-page">
+        <!-- ============================================ **** Banner **** ============================================ -->
+        <div class="row mt-5">
+          <!-- First Column -->
+          <div class="col-lg-6">
+            <p>&nbsp;</p>
+            <h2 class="title">Team</h2>
+            <h5 class="description">
+              One log creates a small fire, adequate to warm you up, add just
+              a few more pieces to blast an immense bonfire, large enough to
+              warm up your entire circle; needless to say that individuality
+              counts but teamwork dynamites. At
+              <b class="blue_text">DSC PGDAV</b>
+              celebrate teamwork and attribute the success of DSC to the
+              wonderful individuals who put untiring efforts for it.
+            </h5>
+            <p>&nbsp;</p>
           </div>
 
-          <div class="container no-padding container-sub-page">
-            <!-- ============================================ Loading Animation ============================================ -->
-           
+          <!-- Second Column -->
+          <div class="col-lg-6">
+            <img class="img-fluid" src="assets/img/kit/team.png" />
+          </div>
+        </div>
 
-            <div id="container-team" class="row">
-              <div class="card-deck">
-                <div class="card" style = "background-color: rgb(214, 33, 33);">
-                  <img class="card-img-top" src="assets/img/team/samar.png" alt="Card image cap">
-                  <div class="card-body">
-                    <h3 class="card-title">Samarjit Mahi</h3>
-                    <p class="card-text"> DSC Lead </p>
-                      <a class="btn btn-primary btn-fab btn-round" id="social_button1"
-                        href="https://www.facebook.com/hisamarmahi" target="_blank">
-                        <i class="fa fa-facebook"></i>
-                      </a><a>&nbsp;</a>
-                      <a class="btn btn-primary btn-fab btn-round" id="social_button1" href="https://twitter.com/hisamarmahi"
-                        target="_blank">
-                        <i class="fa fa-twitter"></i>
-                      </a><a>&nbsp;</a>
-                      <a class="btn btn-primary btn-fab btn-round" id="social_button1"
-                        href="https://www.linkedin.com/in/samarjit-mahi/" target="_blank">
-                        <i class="fa fa-linkedin"></i>
-                      </a><a>&nbsp;</a>
-               
-                      <a class="btn btn-primary btn-fab btn-round" id="social_button1" href="https://github.com/Samarjiit"
-                        target="_blank">
-                        <i class="fa fa-github"></i>
-                      </a><a>&nbsp;</a>
+        <div class="container no-padding container-sub-page">
+          <!-- ============================================ Loading Animation ============================================ -->
 
-                            <!--  <a class="btn btn-primary btn-fab btn-round" id="social_button1"
+
+          <div id="container-team" class="row">
+            <div class="card-deck">
+              <div class="card" style="background-color: rgb(214, 33, 33);">
+                <img class="card-img-top" src="assets/img/team/samar.png" alt="Card image cap">
+                <div class="card-body">
+                  <h3 class="card-title">Samarjit Mahi</h3>
+                  <p class="card-text"> DSC Lead </p>
+                  <a class="btn btn-primary btn-fab btn-round" id="social_button1"
+                    href="https://www.facebook.com/hisamarmahi" target="_blank">
+                    <i class="fa fa-facebook"></i>
+                  </a><a>&nbsp;</a>
+                  <a class="btn btn-primary btn-fab btn-round" id="social_button1"
+                    href="https://twitter.com/hisamarmahi" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                  </a><a>&nbsp;</a>
+                  <a class="btn btn-primary btn-fab btn-round" id="social_button1"
+                    href="https://www.linkedin.com/in/samarjit-mahi/" target="_blank">
+                    <i class="fa fa-linkedin"></i>
+                  </a><a>&nbsp;</a>
+
+                  <a class="btn btn-primary btn-fab btn-round" id="social_button1" href="https://github.com/Samarjiit"
+                    target="_blank">
+                    <i class="fa fa-github"></i>
+                  </a><a>&nbsp;</a>
+
+                  <!--  <a class="btn btn-primary btn-fab btn-round" id="social_button1"
                         href="https://www.instagram.com/dscpgdav/" target="_blank">
                         <i class="fa fa-instagram"></i>
                       </a><a>&nbsp;</a>
@@ -202,19 +231,19 @@
                         target="_blank">
                         <i class="fa fa-medium"></i>
                       </a><a>&nbsp;</a> -->
-                      
 
-                  </div>
+
                 </div>
+              </div>
 
 
 
-                <div class="card" style = "background-color: rgb(13, 143, 52);">
-                  <img class="card-img-top" src="assets/img/team/21.png" alt="Card image cap">
-                  <div class="card-body">
-                    <h3 class="card-title">Mrs. Veenu Bhasin</h3>
-                    <p class="card-text">Faculty Advisor</p>
-                    <!-- <a class="btn btn-primary btn-fab btn-round" id="social_button1"
+              <div class="card" style="background-color: rgb(13, 143, 52);">
+                <img class="card-img-top" src="assets/img/team/21.png" alt="Card image cap">
+                <div class="card-body">
+                  <h3 class="card-title">Mrs. Veenu Bhasin</h3>
+                  <p class="card-text">Faculty Advisor</p>
+                  <!-- <a class="btn btn-primary btn-fab btn-round" id="social_button1"
                         href="https://www.facebook.com/hisamarmahi" target="_blank">
                         <i class="fa fa-facebook"></i>
                       </a><a>&nbsp;</a>
@@ -222,173 +251,199 @@
                         target="_blank">
                         <i class="fa fa-twitter"></i>
                       </a><a>&nbsp;</a> -->
-                      <a class="btn btn-primary btn-fab btn-round" id="social_button1"
-                        href="https://www.linkedin.com/in/veenu-bhasin-1b69864/" target="_blank">
-                        <i class="fa fa-linkedin"></i>
-                      </a><a>&nbsp;</a>
-<!--                
+                  <a class="btn btn-primary btn-fab btn-round" id="social_button1"
+                    href="https://www.linkedin.com/in/veenu-bhasin-1b69864/" target="_blank">
+                    <i class="fa fa-linkedin"></i>
+                  </a><a>&nbsp;</a>
+                  <!--                
                       <a class="btn btn-primary btn-fab btn-round" id="social_button1" href="https://github.com/Samarjiit"
                         target="_blank">
                         <i class="fa fa-github"></i>
                       </a><a>&nbsp;</a>  -->
-                  </div>
-                </div>
-
-
-                <div class="card" style = "background-color: rgb(228, 231, 41);">
-                  <img class="card-img-top" src="assets/img/team/11.png" alt="Card image cap">
-                  <div class="card-body">
-                    <h3 class="card-title">Ansh Rastogi</h3>
-                    <p class="card-text"> Management Lead|Web Developer </p>
-                      <a class="btn btn-primary btn-fab btn-round" id="social_button1" href="https://twitter.com/@AnshRastogi08"
-                        target="_blank">
-                        <i class="fa fa-twitter"></i>
-                      </a><a>&nbsp;</a>
-
-                      <a class="btn btn-primary btn-fab btn-round" id="social_button1"
-                        href="www.linkedin.com/in/ansh-rastogi06" target="_blank">
-                        <i class="fa fa-linkedin"></i>
-                      </a><a>&nbsp;</a>
-               
-                      <a class="btn btn-primary btn-fab btn-round" id="social_button1" href="https://github.com/anshrastogi240901"
-                        target="_blank">
-                        <i class="fa fa-github"></i>
-                      </a><a>&nbsp;</a>
-                  </div>
                 </div>
               </div>
 
 
-              <div class="card-deck">
-                <div class="card" style = "background-color: rgb(43, 71, 230);">
-                  <img class="card-img-top" src="assets/img/team/12.png" alt="Card image cap">
-                  <div class="card-body">
-                    <h3 class="card-title">Vaibhav Bisht</h3>
-                    <p class="card-text"> Project Lead|App Developer</p>
-                      <a class="btn btn-primary btn-fab btn-round" id="social_button1" href="https://twitter.com/vaibhav78460855"
-                        target="_blank">
-                        <i class="fa fa-twitter"></i>
-                      </a><a>&nbsp;</a>
-                      <a class="btn btn-primary btn-fab btn-round" id="social_button1"
-                        href="https://www.linkedin.com/in/vaibhav-singh-bisht-81619b126" target="_blank">
-                        <i class="fa fa-linkedin"></i>
-                      </a><a>&nbsp;</a>
-               
-                      <a class="btn btn-primary btn-fab btn-round" id="social_button1" href="https://github.com/vaibhav135"
-                        target="_blank">
-                        <i class="fa fa-github"></i>
-                      </a><a>&nbsp;</a>    
-                  </div>
+              <div class="card" style="background-color: rgb(228, 231, 41);">
+                <img class="card-img-top" src="assets/img/team/11.png" alt="Card image cap">
+                <div class="card-body">
+                  <h3 class="card-title">Ansh Rastogi</h3>
+                  <p class="card-text"> Management Lead|Web Developer </p>
+                  <a class="btn btn-primary btn-fab btn-round" id="social_button1"
+                    href="https://twitter.com/@AnshRastogi08" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                  </a><a>&nbsp;</a>
+
+                  <a class="btn btn-primary btn-fab btn-round" id="social_button1"
+                    href="www.linkedin.com/in/ansh-rastogi06" target="_blank">
+                    <i class="fa fa-linkedin"></i>
+                  </a><a>&nbsp;</a>
+
+                  <a class="btn btn-primary btn-fab btn-round" id="social_button1"
+                    href="https://github.com/anshrastogi240901" target="_blank">
+                    <i class="fa fa-github"></i>
+                  </a><a>&nbsp;</a>
                 </div>
+              </div>
+            </div>
 
 
-                <div class="card" style = "background-color: rgb(214, 33, 33);">
-                  <img class="card-img-top" src="assets/img/team/13.png" alt="Card image cap">
-                  <div class="card-body">
-                    <h3 class="card-title">Yamini Sharma</h3>
-                    <p class="card-text"> Event Lead </p>
-                      <a class="btn btn-primary btn-fab btn-round" id="social_button1" href="https://twitter.com/yaminis8750"
-                        target="_blank">
-                        <i class="fa fa-twitter"></i>
-                      </a><a>&nbsp;</a>
-                      <a class="btn btn-primary btn-fab btn-round" id="social_button1"
-                        href=" https://www.linkedin.com/in/yamini-sharma-9a9ba31a0/" target="_blank">
-                        <i class="fa fa-linkedin"></i>
-                      </a><a>&nbsp;</a>
-               
-                      <a class="btn btn-primary btn-fab btn-round" id="social_button1" href="https://github.com/Yamini-8750"
-                        target="_blank">
-                        <i class="fa fa-github"></i>
-                      </a><a>&nbsp;</a>
-                  </div>
-                </div>
+            <div class="card-deck">
+              <div class="card" style="background-color: rgb(43, 71, 230);">
+                <img class="card-img-top" src="assets/img/team/12.png" alt="Card image cap">
+                <div class="card-body">
+                  <h3 class="card-title">Vaibhav Bisht</h3>
+                  <p class="card-text"> Project Lead|App Developer</p>
+                  <a class="btn btn-primary btn-fab btn-round" id="social_button1"
+                    href="https://twitter.com/vaibhav78460855" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                  </a><a>&nbsp;</a>
+                  <a class="btn btn-primary btn-fab btn-round" id="social_button1"
+                    href="https://www.linkedin.com/in/vaibhav-singh-bisht-81619b126" target="_blank">
+                    <i class="fa fa-linkedin"></i>
+                  </a><a>&nbsp;</a>
 
-                <div class="card" style="background-color: rgb(13, 143, 52);">
-                  <img class="card-img-top" src="assets/img/team/16.png" alt="Card image cap">
-                  <div class="card-body">
-                    <h3 class="card-title">Srijan Dixit</h3>
-                    <p class="card-text">ML/AI Developer</p>
-                    
-                      <a class="btn btn-primary btn-fab btn-round" id="social_button1"
-                        href="http://linkedin.com/in/srijan-dixit-6a9508194" target="_blank">
-                        <i class="fa fa-linkedin"></i>
-                      </a><a>&nbsp;</a>
-               
-                      <a class="btn btn-primary btn-fab btn-round" id="social_button1" href="http://github.com/Srijan-dixit"
-                        target="_blank">
-                        <i class="fa fa-github"></i>
-                      </a><a>&nbsp;</a>   
-                  </div>
+                  <a class="btn btn-primary btn-fab btn-round" id="social_button1" href="https://github.com/vaibhav135"
+                    target="_blank">
+                    <i class="fa fa-github"></i>
+                  </a><a>&nbsp;</a>
                 </div>
               </div>
 
 
-              <div class="card-deck">
-                <div class="card" style = "background-color: rgb(228, 231, 41);">
-                  <img class="card-img-top" src="assets/img/team/17.png" alt="Card image cap">
-                  <div class="card-body">
-                    <h3 class="card-title">Anshul Kansal</h3>
-                    <p class="card-text">ML/AI Developer</p>
-                   
-                      <a class="btn btn-primary btn-fab btn-round" id="social_button1" href="https://twitter.com/anshulKansal121"
-                        target="_blank">
-                        <i class="fa fa-twitter"></i>
-                      </a><a>&nbsp;</a>
-                      <a class="btn btn-primary btn-fab btn-round" id="social_button1"
-                        href="https://www.linkedin.com/in/anshulkansal-" target="_blank">
-                        <i class="fa fa-linkedin"></i>
-                      </a><a>&nbsp;</a>
-               
-                      <a class="btn btn-primary btn-fab btn-round" id="social_button1" href="https://github.com/anshulkansal121"
-                        target="_blank">
-                        <i class="fa fa-github"></i>
-                      </a><a>&nbsp;</a>      
-                  </div>
+              <div class="card" style="background-color: rgb(214, 33, 33);">
+                <img class="card-img-top" src="assets/img/team/13.png" alt="Card image cap">
+                <div class="card-body">
+                  <h3 class="card-title">Yamini Sharma</h3>
+                  <p class="card-text"> Event Lead </p>
+                  <a class="btn btn-primary btn-fab btn-round" id="social_button1"
+                    href="https://twitter.com/yaminis8750" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                  </a><a>&nbsp;</a>
+                  <a class="btn btn-primary btn-fab btn-round" id="social_button1"
+                    href=" https://www.linkedin.com/in/yamini-sharma-9a9ba31a0/" target="_blank">
+                    <i class="fa fa-linkedin"></i>
+                  </a><a>&nbsp;</a>
+
+                  <a class="btn btn-primary btn-fab btn-round" id="social_button1" href="https://github.com/Yamini-8750"
+                    target="_blank">
+                    <i class="fa fa-github"></i>
+                  </a><a>&nbsp;</a>
                 </div>
+              </div>
 
+              <div class="card" style="background-color: rgb(13, 143, 52);">
+                <img class="card-img-top" src="assets/img/team/16.png" alt="Card image cap">
+                <div class="card-body">
+                  <h3 class="card-title">Srijan Dixit</h3>
+                  <p class="card-text">ML/AI Developer</p>
 
-                <div class="card" style = "background-color: rgb(43, 71, 230);">
-                  <img class="card-img-top" src="assets/img/team/15.png" alt="Card image cap">
-                  <div class="card-body">
-                    <h3 class="card-title">Anjali Garg</h3>
-                    <p class="card-text">Graphic Designer</p>
-                   
-                      <a class="btn btn-primary btn-fab btn-round" id="social_button1" href="https://twitter.com/AnjaliG23128568?s=08"
-                        target="_blank">
-                        <i class="fa fa-twitter"></i>
-                      </a><a>&nbsp;</a>
-                      <a class="btn btn-primary btn-fab btn-round" id="social_button1"
-                        href="https://www.linkedin.com/in/anjali-garg-51112b1aa" target="_blank">
-                        <i class="fa fa-linkedin"></i>
-                      </a><a>&nbsp;</a>
-               
-                      <a class="btn btn-primary btn-fab btn-round" id="social_button1" href="https://github.com/anjali726"
-                        target="_blank">
-                        <i class="fa fa-github"></i>
-                      </a><a>&nbsp;</a>
-                  </div>
+                  <a class="btn btn-primary btn-fab btn-round" id="social_button1"
+                    href="http://linkedin.com/in/srijan-dixit-6a9508194" target="_blank">
+                    <i class="fa fa-linkedin"></i>
+                  </a><a>&nbsp;</a>
+
+                  <a class="btn btn-primary btn-fab btn-round" id="social_button1" href="http://github.com/Srijan-dixit"
+                    target="_blank">
+                    <i class="fa fa-github"></i>
+                  </a><a>&nbsp;</a>
                 </div>
+              </div>
+            </div>
 
 
-                <div class="card" style = "background-color: rgb(214, 33, 33);">
-                  <img class="card-img-top" src="assets/img/team/18.png" alt="Card image cap">
-                  <div class="card-body">
-                    <h3 class="card-title">Himanshu Tiwari</h3>
-                     <p class="card-text">Management Lead|Web Developer</p>
-                      <a class="btn btn-primary btn-fab btn-round" id="social_button1" href="https://twitter.com/Himansh34258296"
-                        target="_blank">
-                        <i class="fa fa-twitter"></i>
-                      </a><a>&nbsp;</a>
-                      <a class="btn btn-primary btn-fab btn-round" id="social_button1"
-                        href="https://www.linkedin.com/in/himanshu-tiwari15092001" target="_blank">
-                        <i class="fa fa-linkedin"></i>
-                      </a><a>&nbsp;</a>
-               
-                      <a class="btn btn-primary btn-fab btn-round" id="social_button1" href="https://github.com/himanshutiwari15"
-                        target="_blank">
-                        <i class="fa fa-github"></i>
-                      </a><a>&nbsp;</a>    
-                  </div>
+            <div class="card-deck">
+              <div class="card" style="background-color: rgb(228, 231, 41);">
+                <img class="card-img-top" src="assets/img/team/17.png" alt="Card image cap">
+                <div class="card-body">
+                  <h3 class="card-title">Anshul Kansal</h3>
+                  <p class="card-text">ML/AI Developer</p>
+
+                  <a class="btn btn-primary btn-fab btn-round" id="social_button1"
+                    href="https://twitter.com/anshulKansal121" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                  </a><a>&nbsp;</a>
+                  <a class="btn btn-primary btn-fab btn-round" id="social_button1"
+                    href="https://www.linkedin.com/in/anshulkansal-" target="_blank">
+                    <i class="fa fa-linkedin"></i>
+                  </a><a>&nbsp;</a>
+
+                  <a class="btn btn-primary btn-fab btn-round" id="social_button1"
+                    href="https://github.com/anshulkansal121" target="_blank">
+                    <i class="fa fa-github"></i>
+                  </a><a>&nbsp;</a>
+                </div>
+              </div>
+
+
+              <div class="card" style="background-color: rgb(43, 71, 230);">
+                <img class="card-img-top" src="assets/img/team/15.png" alt="Card image cap">
+                <div class="card-body">
+                  <h3 class="card-title">Anjali Garg</h3>
+                  <p class="card-text">Graphic Designer</p>
+
+                  <a class="btn btn-primary btn-fab btn-round" id="social_button1"
+                    href="https://twitter.com/AnjaliG23128568?s=08" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                  </a><a>&nbsp;</a>
+                  <a class="btn btn-primary btn-fab btn-round" id="social_button1"
+                    href="https://www.linkedin.com/in/anjali-garg-51112b1aa" target="_blank">
+                    <i class="fa fa-linkedin"></i>
+                  </a><a>&nbsp;</a>
+
+                  <a class="btn btn-primary btn-fab btn-round" id="social_button1" href="https://github.com/anjali726"
+                    target="_blank">
+                    <i class="fa fa-github"></i>
+                  </a><a>&nbsp;</a>
+                </div>
+              </div>
+
+
+              <!-- <div class="card" style="background-color: rgb(214, 33, 33);">
+                <img class="card-img-top" src="assets/img/team/18.png" alt="Card image cap">
+                <div class="card-body">
+                  <h3 class="card-title">Himanshu Tiwari</h3>
+                  <p class="card-text">Management Lead|Web Developer</p>
+                  <a class="btn btn-primary btn-fab btn-round" id="social_button1"
+                    href="https://twitter.com/Himansh34258296" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                  </a><a>&nbsp;</a>
+                  <a class="btn btn-primary btn-fab btn-round" id="social_button1"
+                    href="https://www.linkedin.com/in/himanshu-tiwari15092001" target="_blank">
+                    <i class="fa fa-linkedin"></i>
+                  </a><a>&nbsp;</a>
+
+                  <a class="btn btn-primary btn-fab btn-round" id="social_button1"
+                    href="https://github.com/himanshutiwari15" target="_blank">
+                    <i class="fa fa-github"></i>
+                  </a><a>&nbsp;</a>
+                </div>
+              </div>
+            </div> -->
+
+              <div class="container_new">
+
+                <img src="https://www.schbang.com/wp-content/uploads/2018/12/07-1.jpg" alt="Avatar" class="image_new">
+
+                <div class="overlay_new">
+                  <div class="text_new">Anurag Kashyap</div>
+                  <p class="div_p_new">Web-Designer | Management Lead</p>
+                </div>
+                <div class="card-body">
+
+                  <a class="btn btn-primary btn-fab btn-round" id="social_button1"
+                    href="https://twitter.com/Himansh34258296" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                  </a><a>&nbsp;</a>
+                  <a class="btn btn-primary btn-fab btn-round" id="social_button1"
+                    href="https://www.linkedin.com/in/himanshu-tiwari15092001" target="_blank">
+                    <i class="fa fa-linkedin"></i>
+                  </a><a>&nbsp;</a>
+
+                  <a class="btn btn-primary btn-fab btn-round" id="social_button1"
+                    href="https://github.com/himanshutiwari15" target="_blank">
+                    <i class="fa fa-github"></i>
+                  </a><a>&nbsp;</a>
                 </div>
               </div>
 
@@ -400,69 +455,69 @@
                   <div class="card-body">
                     <h3 class="card-title">Javed Baig</h3>
                     <p class="card-text">ML/AI Developer</p>
-                   
-                      <a class="btn btn-primary btn-fab btn-round" id="social_button1" href="https://twitter.com/@javedbaig25"
-                        target="_blank">
-                        <i class="fa fa-twitter"></i>
-                      </a><a>&nbsp;</a>
-                      <a class="btn btn-primary btn-fab btn-round" id="social_button1"
-                        href="https://www.linkedin.com/in/javed-baig-99a9a01b2" target="_blank">
-                        <i class="fa fa-linkedin"></i>
-                      </a><a>&nbsp;</a>
-               
-                      <a class="btn btn-primary btn-fab btn-round" id="social_button1" href="https://github.com/javedbaig"
-                        target="_blank">
-                        <i class="fa fa-github"></i>
-                      </a><a>&nbsp;</a>
+
+                    <a class="btn btn-primary btn-fab btn-round" id="social_button1"
+                      href="https://twitter.com/@javedbaig25" target="_blank">
+                      <i class="fa fa-twitter"></i>
+                    </a><a>&nbsp;</a>
+                    <a class="btn btn-primary btn-fab btn-round" id="social_button1"
+                      href="https://www.linkedin.com/in/javed-baig-99a9a01b2" target="_blank">
+                      <i class="fa fa-linkedin"></i>
+                    </a><a>&nbsp;</a>
+
+                    <a class="btn btn-primary btn-fab btn-round" id="social_button1" href="https://github.com/javedbaig"
+                      target="_blank">
+                      <i class="fa fa-github"></i>
+                    </a><a>&nbsp;</a>
                   </div>
                 </div>
 
 
-                <div class="card" style = "background-color: rgb(228, 231, 41);">
+                <div class="card" style="background-color: rgb(228, 231, 41);">
                   <img class="card-img-top" src="assets/img/team/19.png" alt="Card image cap">
                   <div class="card-body">
                     <h3 class="card-title">Muskan Bansal</h3>
                     <p class="card-text">Graphic Designer</p>
-                      <a class="btn btn-primary btn-fab btn-round" id="social_button1" href="https://mobile.twitter.com/MuskanBansal_18"
-                        target="_blank">
-                        <i class="fa fa-twitter"></i>
-                      </a><a>&nbsp;</a>
-                      <a class="btn btn-primary btn-fab btn-round" id="social_button1"
-                        href="https://www.linkedin.com/in/muskan-bansal-" target="_blank">
-                        <i class="fa fa-linkedin"></i>
-                      </a><a>&nbsp;</a>
-               
-                      <a class="btn btn-primary btn-fab btn-round" id="social_button1" href="https://github.com/Muskanbansal18"
-                        target="_blank">
-                        <i class="fa fa-github"></i>
-                      </a><a>&nbsp;</a>   
+                    <a class="btn btn-primary btn-fab btn-round" id="social_button1"
+                      href="https://mobile.twitter.com/MuskanBansal_18" target="_blank">
+                      <i class="fa fa-twitter"></i>
+                    </a><a>&nbsp;</a>
+                    <a class="btn btn-primary btn-fab btn-round" id="social_button1"
+                      href="https://www.linkedin.com/in/muskan-bansal-" target="_blank">
+                      <i class="fa fa-linkedin"></i>
+                    </a><a>&nbsp;</a>
+
+                    <a class="btn btn-primary btn-fab btn-round" id="social_button1"
+                      href="https://github.com/Muskanbansal18" target="_blank">
+                      <i class="fa fa-github"></i>
+                    </a><a>&nbsp;</a>
                   </div>
                 </div>
 
 
-                <div class="card" style = "background-color: rgb(43, 71, 230);">
+                <div class="card" style="background-color: rgb(43, 71, 230);">
                   <img class="card-img-top" src="assets/img/team/14.png" alt="Card image cap">
                   <div class="card-body">
                     <h3 class="card-title">Nishtha Mahajan</h3>
                     <p class="card-text">Public Relations</p>
-                 
-                      <a class="btn btn-primary btn-fab btn-round" id="social_button1"
-                        href="https://www.linkedin.com/in/nishtha-mahajan-607ba31a0/" target="_blank">
-                        <i class="fa fa-linkedin"></i>
-                      </a><a>&nbsp;</a>
-               
-                      <a class="btn btn-primary btn-fab btn-round" id="social_button1" href="http://github.com/Nishtha-236"
-                        target="_blank">
-                        <i class="fa fa-github"></i>
-                      </a><a>&nbsp;</a>
+
+                    <a class="btn btn-primary btn-fab btn-round" id="social_button1"
+                      href="https://www.linkedin.com/in/nishtha-mahajan-607ba31a0/" target="_blank">
+                      <i class="fa fa-linkedin"></i>
+                    </a><a>&nbsp;</a>
+
+                    <a class="btn btn-primary btn-fab btn-round" id="social_button1"
+                      href="http://github.com/Nishtha-236" target="_blank">
+                      <i class="fa fa-github"></i>
+                    </a><a>&nbsp;</a>
                   </div>
                 </div>
               </div>
-              
+
               <!-- ===== Here the Team will Appear ===== -->
             </div>
 
-            
+
           </div>
         </div>
       </div>
@@ -501,11 +556,12 @@
         $("body").delay(450).css({ overflow: "visible" });
       });
 
-      
-      
+
+
 
       /* ============================================ Funtion for Moving to Particular Member Page ============================================ */
-      
+
     </script>
-  </body>
+</body>
+
 </html>
