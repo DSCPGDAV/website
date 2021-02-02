@@ -1,3 +1,6 @@
+
+
+
 fetch('../../footer.html')
   .then(response => response.text())
   .then(text => {
@@ -5,3 +8,8 @@ fetch('../../footer.html')
 
       footer.innerHTML = text;
   })
+
+
+  
+
+  

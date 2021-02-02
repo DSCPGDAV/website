@@ -1,3 +1,6 @@
+
+
+
 fetch('../../navbar.html')
   .then(response => response.text())
   .then(text => {
@@ -5,3 +8,5 @@ fetch('../../navbar.html')
 
       nabvar.innerHTML = text;
   })
+
+ 
